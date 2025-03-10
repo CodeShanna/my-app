@@ -1,4 +1,5 @@
-.Weather form {
+form {
+  display: block;
   text-align: center;
 }
 li {

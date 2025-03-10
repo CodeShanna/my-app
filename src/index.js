@@ -5,7 +5,7 @@ import "./weather.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Weather from "./Weather";
-import axios from "axios";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

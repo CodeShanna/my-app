@@ -10,6 +10,8 @@ export default function Weather() {
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
+      city: response.data.city,
+      country: response.data.country,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
@@ -41,6 +43,9 @@ export default function Weather() {
       <div>
         {form}
         <ul>
+          <li>
+            Location: {weather.city}, {weather.country}{" "}
+          </li>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Humidity: {weather.humidity}%</li>
           <li>Wind: {weather.wind}km/h</li>
