@@ -1,9 +1,5 @@
-form {
-  display: block;
-  text-align: center;
-}
-li {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+.Weather {
+border: 1px solid;
+margin: 5px;
+padding: 20px;
 }
