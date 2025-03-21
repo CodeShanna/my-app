@@ -3,12 +3,13 @@ import axios from "axios";
 import "./weather.css";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.city,
@@ -16,7 +17,7 @@ export default function Weather(props) {
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
-      icon: response.data.condition.icon_url,
+      icon: response.data.weather[0].icon,
       description: response.data.condition.description,
       alt: response.data.condition.icon,
     });
@@ -29,7 +30,7 @@ export default function Weather(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    search(city);
+    search();
   }
   function handleCityChange(event) {
     setCity(event.target.value);
@@ -56,8 +57,9 @@ export default function Weather(props) {
               />
             </div>
           </div>
-          <WeatherInfo data={weatherData} />
         </form>
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
