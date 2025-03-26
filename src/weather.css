@@ -2,10 +2,14 @@
   font-family: arial, sans-serif;
   border: 1px solid #dadde1;
   padding: 16px;
+  margin: 30px auto;
+ 
   border-radius: 4px;
   color: rgb(135, 135, 135);
 }
-
+.Weather form {
+    margin-bottom: 20px;
+}
 .Weather h1 {
   font-size: 24px;
   font-weight: 100;
@@ -34,11 +38,9 @@
   font-weight: 400;
   margin-left: 10px;
 }
-
 .Weather canvas {
-  margin: 10px auto;
+    margin: 10px auto;
 }
-
 .Weather .unit {
   color: rgb(33, 33, 33);
   font-size: 16px;
