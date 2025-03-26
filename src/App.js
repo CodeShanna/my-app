@@ -8,12 +8,18 @@ export default function App() {
         <Weather defaultCity="Tübingen" />
         <footer>
           This project was coded by{" "}
-          <a href="https://shannajonesportfolio.netlify.app/">Shanna Jones</a>,
-          open-sourced on{" "}
+          <a
+            href="https://shannajonesportfolio.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Shanna Jones
+          </a>
+          , open-sourced on{" "}
           <a
             href="https://github.com/CodeShanna?tab=repositories"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>{" "}
